@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw
 import io
 
 # ==================== НАСТРОЙКИ ====================
-API_TOKEN = '8748071215:AAF3ZvvWWjvBD9p7sCOIwLGE2O4FZ7Lw8Nc'
+API_TOKEN = os.environ.get('API_TOKEN')
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 dp.middleware.setup(LoggingMiddleware())
